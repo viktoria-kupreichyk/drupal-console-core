@@ -46,7 +46,7 @@ trait CommandTrait
     /**
      * @inheritdoc
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         $description = sprintf(
             'commands.%s.description',
