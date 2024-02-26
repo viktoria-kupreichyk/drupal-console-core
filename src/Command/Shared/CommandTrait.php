@@ -63,7 +63,7 @@ trait CommandTrait
     /**
    * @inheritdoc
    */
-    public function getHelp()
+    public function getHelp(): string
     {
         $help = sprintf(
             'commands.%s.help',
