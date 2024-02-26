@@ -83,7 +83,7 @@ class DrupalStyle extends SymfonyStyle
      *
      * @return string
      */
-    public function choice($question, array $choices, $default = null, $multiple = false)
+    public function choice(string $question, array $choices, mixed $default = null, bool $multiple = false): mixed
     {
         if (null !== $default) {
             $values = array_flip($choices);
