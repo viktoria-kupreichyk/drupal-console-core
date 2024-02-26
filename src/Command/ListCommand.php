@@ -34,7 +34,7 @@ class ListCommand extends Command
     /**
      * {@inheritdoc}
      */
-    public function getNativeDefinition()
+    public function getNativeDefinition(): InputDefinition
     {
         return $this->createDefinition();
     }
