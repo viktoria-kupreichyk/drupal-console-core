@@ -79,5 +79,7 @@ class AboutCommand extends Command
         $this->getIo()->writeln($this->trans('commands.self-update.description'));
         $this->getIo()->comment('  drupal self-update');
         $this->getIo()->newLine();
+
+        return 0;
     }
 }
