@@ -86,7 +86,7 @@ class DrupalConsoleCore
         $appRoot = $this->appRoot?$this->appRoot:$this->root;
         $container->set(
             'app.root',
-            $appRoot
+            (object)$appRoot
         );
         $consoleRoot = $appRoot;
         if (stripos($this->root, '/bin/') <= 0) {
@@ -94,12 +94,12 @@ class DrupalConsoleCore
         }
         $container->set(
             'console.root',
-            $consoleRoot
+            (object)$consoleRoot
         );
 
         $container->set(
             'console.drupal_finder',
-            $this->drupalFinder
+            (object)$this->drupalFinder
         );
 
         $configurationManager = $container->get('console.configuration_manager');
