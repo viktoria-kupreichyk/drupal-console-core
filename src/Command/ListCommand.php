@@ -66,6 +66,8 @@ class ListCommand extends Command
         );
 
         $this->getIo()->newLine();
+
+        return 0;
     }
 
     /**
