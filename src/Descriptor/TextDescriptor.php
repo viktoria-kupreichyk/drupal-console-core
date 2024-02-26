@@ -29,7 +29,7 @@ class TextDescriptor extends Descriptor
     /**
      * {@inheritdoc}
      */
-    protected function describeInputArgument(InputArgument $argument, array $options = [])
+    protected function describeInputArgument(InputArgument $argument, array $options = []): void
     {
         if (null !== $argument->getDefault() && (!is_array($argument->getDefault()) || count($argument->getDefault()))) {
             $default = sprintf('<comment> [default: %s]</comment>', $this->formatDefaultValue($argument->getDefault()));
