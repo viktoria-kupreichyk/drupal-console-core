@@ -12,16 +12,16 @@ services:
     class: Drupal\Console\Core\Utils\NestedArray
   console.show_file:
     class: Drupal\Console\Core\Utils\ShowFile
-    arguments: ['@app.root', '@console.translator_manager']
+    arguments: ['%app.root%', '@console.translator_manager']
   console.renderer:
     class: Drupal\Console\Core\Utils\TwigRenderer
     arguments: ['@console.translator_manager', '@console.string_converter']
   console.file_queue:
     class: Drupal\Console\Core\Utils\FileQueue
-    arguments: ['@app.root']
+    arguments: ['%app.root%']
   console.shell_process:
     class: Drupal\Console\Core\Utils\ShellProcess
-    arguments: ['@app.root', '@console.translator_manager']
+    arguments: ['%app.root%', '@console.translator_manager']
   console.string_converter:
     class: Drupal\Console\Core\Utils\StringConverter
   console.chain_discovery:
@@ -59,7 +59,7 @@ services:
       - { name: drupal.command }
   console.init:
     class: Drupal\Console\Core\Command\InitCommand
-    arguments: ['@console.show_file', '@console.configuration_manager', '@console.init_generator', '@app.root', '@?console.root']
+    arguments: ['@console.show_file', '@console.configuration_manager', '@console.init_generator', '%app.root%', '@?console.root']
     tags:
       - { name: drupal.command }
   console.settings_debug:
