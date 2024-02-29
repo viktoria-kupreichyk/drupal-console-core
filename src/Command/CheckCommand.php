@@ -144,6 +144,6 @@ class CheckCommand extends Command
             );
         }
 
-        return $this->requirementChecker->isValid();
+        return (int)$this->requirementChecker->isValid();
     }
 }
